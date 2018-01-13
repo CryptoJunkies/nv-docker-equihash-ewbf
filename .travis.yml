@@ -1,0 +1,19 @@
+sudo: required
+
+language: bash
+
+dist: xenial
+
+services:
+  - docker
+
+script:
+  - TAG="0.3.4b"
+  - CONT_NAME="equihash-ewbf-nv"
+  - REPO="cryptojunkies"
+  - docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
+  - docker build -t $REPO/$CONT_NAME:latest ./build
+  - docker images
+  - docker tag $REPO/$CONT_NAME:latest $REPO/$CONT_NAME:$TAG
+  - docker push $REPO/$CONT_NAME:$TAG
+  - docker push $REPO/$CONT_NAME:latest
