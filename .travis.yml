@@ -9,7 +9,7 @@ services:
 
 script:
   - TAG="0.3.4b"
-  - CONT_NAME="equihash-ewbf-nv"
+  - CONT_NAME="ewbf"
   - REPO="cryptojunkies"
   - docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
   - docker build -t $REPO/$CONT_NAME:latest ./build
