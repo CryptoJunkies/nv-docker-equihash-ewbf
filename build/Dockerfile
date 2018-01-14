@@ -24,4 +24,4 @@ WORKDIR /miner
 EXPOSE 42000/tcp
 
 ENTRYPOINT [ "/miner/miner" ]
-CMD [ "--server", "hostname", "--port", "port", "--user", "user", "--pass", "pass", "--telemetry", "0.0.0.0:42000 ]
+CMD [ "--server", "hostname", "--port", "port", "--user", "user", "--pass", "pass", "--api", "0.0.0.0:42000 ]
