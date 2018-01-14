@@ -23,5 +23,5 @@ WORKDIR /miner
 # API port
 EXPOSE 42000/tcp
 
-ENTRYPOINT [ "/bin/bash", "/miner/miner" ]
+ENTRYPOINT [ "/miner/miner" ]
 CMD [ "--server", "hostname", "--port", "port", "--user", "user", "--pass", "pass", "--telemetry", "0.0.0.0:42000 ]
