@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  && rm -rf /var/lib/apt/lists/* \
  && mkdir /miner \
  && wget --no-check-certificate $MINER_URL \
- && tar -xvf $MINER_FILE -C /miner --strip-components 1 \
+ && tar -xvf $MINER_FILE -C /miner \
  && rm $MINER_FILE
 
 WORKDIR /miner
